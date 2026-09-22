@@ -1,4 +1,4 @@
-# documentary-mg-generator - MiniMax H3 细粒度 MG 导演 Skill
+# hardcore-mg-skill - MiniMax H3 细粒度 MG 导演 Skill
 > L2 | 父级: ../CLAUDE.md
 
 本 Skill 将任意内容、参考图/视频/音频和真实素材先编译为 24 类语义信号、24 套结构程序、48 套执行配方、三类脑内候选、96 条原子动作职责图、12 条微运动与 12 条注意阅读规则，再生成 H3 4–15 秒语义段、逐镜/微拍、五层画面、生命周期、原生 Prompt、API 请求与差量修订。样片只作为研究养料，运行时不携带原片身份或时间码。

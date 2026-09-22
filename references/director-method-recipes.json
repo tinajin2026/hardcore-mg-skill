@@ -2,7 +2,7 @@
   "_contract": {
     "[INPUT]": "依赖新稿件的题材、证据、媒介、结构与格式特征，不依赖原片题名或时间位置。",
     "[OUTPUT]": "提供 48 套可组合执行配方、动作基栈、候选世界、状态顺序、媒介政策与冲突规则。",
-    "[POS]": "documentary-mg-generator 的执行配方真源，位于结构程序与 96 条原子动作之间。",
+    "[POS]": "hardcore-mg-skill 的执行配方真源，位于结构程序与 96 条原子动作之间。",
     "[PROTOCOL]": "变更时更新此头部，然后检查 CLAUDE.md"
   },
   "version": "director-method-router.v2",

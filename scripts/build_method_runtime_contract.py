@@ -2,7 +2,7 @@
 """
 [INPUT]: 读取 references/method-trigger-lattice.yaml 的信号、程序与融合规则。
 [OUTPUT]: 确定性生成或核对 references/method-runtime-contract.json，供纯标准库验证器读取。
-[POS]: documentary-mg-generator 的方法路由合同编译器，隔离 YAML 构建依赖与运行时校验依赖。
+[POS]: hardcore-mg-skill 的方法路由合同编译器，隔离 YAML 构建依赖与运行时校验依赖。
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 """
 

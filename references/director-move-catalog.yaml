@@ -1,6 +1,6 @@
 # [INPUT]: 依赖已蒸馏的跨题材视觉规律与新稿件的当前判断结构，不依赖原片身份或时间码。
 # [OUTPUT]: 提供 12 个决策维度、96 条可检索原子编导动作及其触发、脑内画面、执行、原理和反模式。
-# [POS]: documentary-mg-generator 的运行时动作真源，把宏观规律展开为可组合、可冲突消解的最小导演单元。
+# [POS]: hardcore-mg-skill 的运行时动作真源，把宏观规律展开为可组合、可冲突消解的最小导演单元。
 # [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 version: director-move-catalog.v2
 guardrail_ids: [R08, T07, L08, Q01, Q02, Q04, Q05, Q08]

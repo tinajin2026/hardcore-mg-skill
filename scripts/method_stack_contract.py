@@ -2,7 +2,7 @@
 """
 [INPUT]: 接收 h3-mg-plan.v7 单段的 method_stack、selected_moves、运行时方法合同与上层错误回调。
 [OUTPUT]: 校验信号强制动作、程序 spine、融合规则、配方覆盖、路由差量、阶段归属与动作职责图的一致性。
-[POS]: documentary-mg-generator 的方法组合合同模块，被 H3 主验证器复用，避免把多维方法退化为 ID 清单。
+[POS]: hardcore-mg-skill 的方法组合合同模块，被 H3 主验证器复用，避免把多维方法退化为 ID 清单。
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 """
 

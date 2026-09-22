@@ -1,4 +1,4 @@
-# Documentary MG Generator
+# Hardcore MG Skill
 
 **Turn written content into inspectable motion-graphics direction plans.**
 
@@ -20,8 +20,8 @@ The included adapter targets MiniMax H3 and plans 4–15 second segments. These 
 ## Getting Started
 
 ```bash
-git clone https://github.com/tinajin2026/documentary-mg-generator.git
-cd documentary-mg-generator
+git clone https://github.com/tinajin2026/hardcore-mg-skill.git
+cd hardcore-mg-skill
 ```
 
 Place the entire directory in your assistant's supported skills location, or ask a file-capable assistant to read `SKILL.md`. Preserve the relative directory structure. The main skill and most reference materials are written in Chinese.
@@ -29,7 +29,7 @@ Place the entire directory in your assistant's supported skills location, or ask
 Example request:
 
 ```text
-Read documentary-mg-generator/SKILL.md and use it to plan a 16:9
+Read hardcore-mg-skill/SKILL.md and use it to plan a 16:9
 motion-graphics explanation. Plan only; do not call a video API.
 
 Content: Rain falls onto a roof, flows through a gutter into a storage

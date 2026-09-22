@@ -2,7 +2,7 @@
 """
 [INPUT]: 读取当前语义段的 SG01–SG24 信号或显式特征，以及 references/director-method-recipes.json。
 [OUTPUT]: 输出主/辅程序与融合规则、主/叠配方、按语义完整激活的动作、世界锁与冲突消解，并穷举验证一至五信号请求和 48 配方可达性。
-[POS]: documentary-mg-generator 的确定性方法组合器，把语义判断编译为可审计导演方法栈。
+[POS]: hardcore-mg-skill 的确定性方法组合器，把语义判断编译为可审计导演方法栈。
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 """
 

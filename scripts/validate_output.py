@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-[INPUT]: 读取 documentary-mg-generator 产出的 Markdown/YAML 项目合同、段落卡或执行 Prompt。
+[INPUT]: 读取 hardcore-mg-skill 产出的 Markdown/YAML 项目合同、段落卡或执行 Prompt。
 [OUTPUT]: 报告缺失结构、未替换占位符、底部旁白字幕指令和跨段接口错误，成功时退出码为 0。
 [POS]: Skill 的确定性输出门禁，只校验合同和明确禁项，视觉质量仍需播放/逐帧复核。
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md

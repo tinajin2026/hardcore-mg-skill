@@ -1,10 +1,10 @@
-# Documentary MG Generator
+# 硬核的 MG Skill
 
 **把文字内容转成可审查、可执行的 MG 动态图形导演方案。**
 
 [English](README.en.md) · [Skill 入口](SKILL.md) · [效果展示](examples/README.md) · [贡献指南](CONTRIBUTING.md)
 
-Documentary MG Generator 是一个面向 AI 编程助手和创作助手的 Skill。它从中文或英文稿件中识别比较、因果、机制、证据、流程等关系，将这些关系组织成导演方法栈，再输出分镜、微时间拍、画面层级、提示词和请求体草案。
+硬核的 MG Skill 是一个面向 AI 编程助手和创作助手的 Skill。它从中文或英文稿件中识别比较、因果、机制、证据、流程等关系，将这些关系组织成导演方法栈，再输出分镜、微时间拍、画面层级、提示词和请求体草案。
 
 它不是视频渲染器，也不是简单的提示词合集。核心工作是回答：**这段内容应该让观众看到什么、先看什么、变化如何发生，以及什么必须保持不变。**
 
@@ -40,8 +40,8 @@ Documentary MG Generator 是一个面向 AI 编程助手和创作助手的 Skill
 ### 1. 获取 Skill
 
 ```bash
-git clone https://github.com/tinajin2026/documentary-mg-generator.git
-cd documentary-mg-generator
+git clone https://github.com/tinajin2026/hardcore-mg-skill.git
+cd hardcore-mg-skill
 ```
 
 将整个仓库目录放入所用助手支持的 Skill 目录，保留 `SKILL.md`、`references/`、`schemas/`、`scripts/` 和 `templates/` 的相对位置。不同助手的安装入口不同；也可以直接让有文件读取能力的助手读取本仓库的 `SKILL.md`。
@@ -51,7 +51,7 @@ cd documentary-mg-generator
 示例请求：
 
 ```text
-请读取 documentary-mg-generator/SKILL.md，使用这个 Skill 为下面的内容
+请读取 hardcore-mg-skill/SKILL.md，使用这个 Skill 为下面的内容
 制作 MG 导演方案。先只做策划，不调用视频生成 API。
 
 内容：雨水落到屋顶，沿排水槽进入储水桶，再经过过滤装置用于浇灌。

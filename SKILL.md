@@ -1,9 +1,9 @@
 ---
-name: documentary-mg-generator
+name: hardcore-mg-skill
 description: 将任意中文或英文帖子、稿件或内容先识别为 24 类语义信号，自动激活 24 套结构程序、48 套执行配方、96 条原子动作、12 条微运动规则和 12 条注意阅读规则，组合成证据、世界、构图、文字、运动、焦点、转场、连续性与护栏共同服务的多维方法栈，再生成 MiniMax H3 可执行的 4–15 秒 MG 导演方案、逐镜/微时间拍、五层画面、生命周期、原生 Prompt 和 API 请求体。用于“看到这段内容该想到什么画面”“内容自动触发 MG 方法论”“15 秒 MG”“MiniMax H3”“MG 分镜”“动态图形提示词”、产品/科普/品牌/数据/角色/字体/三维/活动动画策划或要求颗粒度对齐专业 MG 样片时；方法已完成去来源化蒸馏，不要求回忆原片或时间位置。
 ---
 
-# Documentary MG Generator
+# 硬核的 MG Skill
 
 把内容编译成 MiniMax H3 能执行、人能逐拍审查的 MG 导演合同。先读取稿件中的比较、因果、机制、证据、流程、价值等关系，再让多条方法围绕同一主体和同一视觉世界分工协作；细节不来自堆砌形容词、镜头或特效。
 
@@ -292,7 +292,7 @@ non_diegetic_music:
 保存 JSON 后运行：
 
 ```bash
-SKILL_DIR="${CODEX_HOME:-$HOME/.codex}/skills/documentary-mg-generator"
+SKILL_DIR="${CODEX_HOME:-$HOME/.codex}/skills/hardcore-mg-skill"
 python3 "$SKILL_DIR/scripts/validate_h3_mg_plan.py" path/to/plan.json
 ```
 

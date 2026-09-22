@@ -1,6 +1,6 @@
 # [INPUT]: 依赖新稿件的判断结构、证据责任、主体关系和输出约束，不依赖任何原片题名、案例编号或时间码。
 # [OUTPUT]: 提供 24 类语义信号、24 套复合导演程序和 18 条融合规则，供方法栈自动激活与冲突消解。
-# [POS]: documentary-mg-generator 的内容到方法路由真源，把 96 条原子动作组合成同一画面的多维导演程序。
+# [POS]: hardcore-mg-skill 的内容到方法路由真源，把 96 条原子动作组合成同一画面的多维导演程序。
 # [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 
 version: method-trigger-lattice.v1

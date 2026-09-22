@@ -2,7 +2,7 @@
 """
 [INPUT]: 依赖 XPC 目录/替换目录 JSONL、逐镜分析 JSON 与 final 时间轴 JSON。
 [OUTPUT]: 对外提供不含题名、媒体 ID、时间码、指纹、原帧或逐镜原文的 MG 状态语法图谱，并打印外部审计数量摘要。
-[POS]: documentary-mg-generator 的证据编译器，把研究项目转换为无来源依赖的节奏、类别路由和组合责任。
+[POS]: hardcore-mg-skill 的证据编译器，把研究项目转换为无来源依赖的节奏、类别路由和组合责任。
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 """
 

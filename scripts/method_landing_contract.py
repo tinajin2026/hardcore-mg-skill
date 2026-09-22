@@ -2,7 +2,7 @@
 """
 [INPUT]: 接收已选信号/程序/动作、程序与配方 binding、融合 binding 和五阶段动作归属。
 [OUTPUT]: 校验方法贡献是否落入声明阶段，并验证每条适用融合规则由双方程序动作共同实现。
-[POS]: documentary-mg-generator 的方法落地交叉合同，补足单字段验证无法发现的装饰性方法选择。
+[POS]: hardcore-mg-skill 的方法落地交叉合同，补足单字段验证无法发现的装饰性方法选择。
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 """
 
