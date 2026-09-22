@@ -4,6 +4,8 @@
 
 [中文文档](README.md) · [Skill](SKILL.md) · [Showcase](examples/README.md)
 
+**License: [PolyForm Noncommercial 1.0.0](LICENSE).** General commercial use, including paid client work, requires separate authorization unless otherwise permitted by the license. This is a source-available project. [Previously granted MIT rights remain effective](NOTICE.md).
+
 An agent skill for planning motion graphics from Chinese or English content. It maps semantic relationships to directing methods, then specifies shots, micro-beats, visual layers, reading order, continuity, prompts, and draft API request bodies.
 
 This is a planning and validation toolkit, not a video renderer. An AI assistant interprets the source text and authors the plan; the Python router operates on explicitly supplied signal IDs.
@@ -64,4 +66,8 @@ No model weights, rendering engine, or generation-service client is included. Pl
 
 ## License
 
-Code and method documentation are available under the [MIT License](LICENSE). External models, footage, music, fonts, and trademarks retain their respective rights. Contributions must not include secrets, private data, or unlicensed media; see [CONTRIBUTING.md](CONTRIBUTING.md).
+Code and method documentation are now published under the unmodified [PolyForm Noncommercial License 1.0.0](LICENSE). Noncommercial purposes and explicitly permitted personal and organizational uses are allowed. General commercial use requires separate authorization; there is no additional exception for paid client work.
+
+See [NOTICE.md](NOTICE.md) for the required notice, authorization requests, and legacy licensing. The core Skill and scripts were previously released under MIT, and changing the license does not remove those rights. The original [MIT license](licenses/MIT-legacy.txt) is retained for historical materials.
+
+External models, footage, music, fonts, and trademarks retain their respective rights. Contributions must not include secrets, private data, or unlicensed media; see [CONTRIBUTING.md](CONTRIBUTING.md).
