@@ -1,0 +1,278 @@
+# [INPUT]: 依赖新稿件的判断结构、证据责任、主体关系和输出约束，不依赖任何原片题名、案例编号或时间码。
+# [OUTPUT]: 提供 24 类语义信号、24 套复合导演程序和 18 条融合规则，供方法栈自动激活与冲突消解。
+# [POS]: documentary-mg-generator 的内容到方法路由真源，把 96 条原子动作组合成同一画面的多维导演程序。
+# [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+
+version: method-trigger-lattice.v1
+
+selection_contract:
+  primary_signal: 每段恰好一个，决定观众必须完成的核心认知动作。
+  secondary_signals: 每段零到四个，只能强化证据、世界、比较、文字或情绪，不能另开叙事主线。
+  primary_program: 每段恰好一个，决定 opening 到 landing 的状态骨架。
+  supporting_programs: 每段零到三个，必须声明插入主程序的阶段和交付责任。
+  atomic_moves: 按当前语义义务完整激活，不设数量配额；必须覆盖 N/C/M/L/Q，其他维度仅在真实触发时进入，且全部绑定当前原文和协作对象。
+  effect_chain: opening -> development -> turn -> payoff -> landing，五阶段必须是同一对象或同一视觉世界的增量变化。
+
+signals:
+  - id: SG01
+    name: 抽象判断
+    detect: 核心判断不可直接拍摄，只有能力、压力、信任、效率、控制或价值等抽象状态。
+    question: 这个抽象判断能变成哪一种可观察的物体状态？
+    obligation: 选择与判断同构的实体，并定义可见的初态、受力、变化和终态。
+    candidate_programs: [DP01, DP16]
+    recipe_features: [ABSTRACT]
+    forced_moves: [N01, C03, M08]
+    reject: 灯泡、火箭、齿轮、芯片、万能 HUD 等只相关题材却不表达关系的图标。
+  - id: SG02
+    name: 定义与组成
+    detect: 文稿在回答某物是什么、由什么组成、边界在哪里或哪些项属于它。
+    question: 观众需要先看整体，还是先看到组成规则？
+    obligation: 冻结整体轮廓，分层拆解后必须回装，分类项使用固定槽位。
+    candidate_programs: [DP02, DP20]
+    recipe_features: [ABSTRACT, MECHANISM, PROCESS]
+    forced_moves: [C04, M07, L02]
+    reject: 把定义拆成无空间关系的图标列表。
+  - id: SG03
+    name: 公平比较
+    detect: 两个或多个方案、产品、阶段或主体需要比较优劣、替代或差异。
+    question: 哪个变量必须保持不变，哪个变量才允许变化？
+    obligation: 统一坐标、尺度、单位、观察角度和阅读顺序。
+    candidate_programs: [DP03, DP08, DP18, DP21]
+    recipe_features: [COMPARISON]
+    forced_moves: [N02, C05, E05]
+    reject: 用不同景别、不同面积或不同色彩权重预设结论。
+  - id: SG04
+    name: 时间演化
+    detect: 判断依赖年份、代际、阶段、版本、前史或长期变化。
+    question: 哪几个节点真正改变了对象状态，哪些年份只是噪声？
+    obligation: 只保留状态发生变化的节点，并维护同一对象的谱系身份。
+    candidate_programs: [DP04, DP08]
+    recipe_features: [TIME, HISTORY, GENEALOGY]
+    forced_moves: [N03, E06, L03]
+    reject: 一次铺满所有年份的密集年表。
+  - id: SG05
+    name: 因果关系
+    detect: 判断含明确原因、传输机制和结果，或存在上下游影响。
+    question: 哪个状态先成立，下一状态为何因此发生？
+    obligation: 原因、机制、结果依次建立，已成立状态不能被重置。
+    candidate_programs: [DP05, DP17, DP19]
+    recipe_features: [CAUSE]
+    forced_moves: [N04, E04, M05]
+    reject: 同时点亮全部节点，或把相关性画成确定因果。
+  - id: SG06
+    name: 内部机制
+    detect: 判断依赖对象内部的结构、算法、信号、能量、材料或部件作用。
+    question: 从哪个外观入口进入内部，沿哪条路径看，最终如何回到整体？
+    obligation: 整体、剖面、作用路径、回装四个状态共享同一对象坐标。
+    candidate_programs: [DP02, DP06, DP09, DP24]
+    recipe_features: [MECHANISM, SIGNAL_FLOW]
+    forced_moves: [N05, C04, M07]
+    reject: 从产品外观直接跳到无坐标粒子或抽象隧道。
+  - id: SG07
+    name: 流程与路径
+    detect: 材料、资金、信息、能量、任务或产品必须经过多个环节。
+    question: 输入在哪里、转换在哪里、损耗或阻塞在哪里、输出是什么？
+    obligation: 固定起终点，载体沿单方向移动，每个节点只改变一个状态。
+    candidate_programs: [DP07, DP13]
+    recipe_features: [PROCESS]
+    forced_moves: [W07, E04, M05]
+    reject: 没有输入输出、方向和状态变化的循环箭头。
+  - id: SG08
+    name: 数字与差值
+    detect: 判断依赖数量、比例、金额、性能、增长、下降、份额或尺度。
+    question: 数字相对什么基线、在哪个时间窗、以什么单位成立？
+    obligation: 基线、变化量、终值、单位和结论构成不可拆组件。
+    candidate_programs: [DP08, DP03, DP13]
+    recipe_features: [DATA]
+    forced_moves: [N07, T04, Q05]
+    reject: 孤立巨大数字、截断标尺和无口径箭头。
+  - id: SG09
+    name: 引用与原始材料
+    detect: 判断来自帖子、报道、文件、讲话、公告、专利或原始截图。
+    question: 观众如何同时确认出处和读懂关键局部？
+    obligation: 载体全貌、局部框选、放大阅读、回到出处形成闭环。
+    candidate_programs: [DP10, DP22]
+    recipe_features: [QUOTE, DOCUMENT]
+    forced_moves: [N06, T05, E01]
+    reject: 重打一行大字冒充原始材料，或裁到无法辨认来源。
+  - id: SG10
+    name: 真实存在证明
+    detect: 判断必须证明人物、产品、地点、事件或现场确实存在。
+    question: 哪个真实素材承担存在性，MG 只负责解释什么？
+    obligation: 真实材料先承担证明，生成画面不得冒充现场或档案。
+    candidate_programs: [DP10, DP11, DP22]
+    recipe_features: [LIVE_ACTION, ARCHIVE]
+    forced_moves: [R01, H01, Q01]
+    reject: 用生成画面替代事实证据。
+  - id: SG11
+    name: 人物与组织关系
+    detect: 多个人物、公司、组织、资金或控制关系共同决定判断。
+    question: 谁到谁、是什么关系、方向和确定性分别是什么？
+    obligation: 节点先出现，关系后建立，线型和标签表达确定性。
+    candidate_programs: [DP11, DP13]
+    recipe_features: [PERSON, RELATION, INVESTIGATION]
+    forced_moves: [R04, E03, Q06]
+    reject: 装饰连线、无方向关系和把指控画成事实。
+  - id: SG12
+    name: 层级与生态
+    detect: 一个核心主体连接多类角色、层级、模块或外部系统。
+    question: 哪个对象是中心，外围如何分组，观众先读哪一圈？
+    obligation: 中心先锁定，外围按类别分批进入，非当前关系退场。
+    candidate_programs: [DP12, DP20]
+    recipe_features: [ECOSYSTEM, RELATION]
+    forced_moves: [C06, M01, L04]
+    reject: 一次生成无法阅读的蜘蛛网。
+  - id: SG13
+    name: 地域与分布
+    detect: 判断依赖地点、距离、扩张、跨境、供应链或空间分布。
+    question: 地理位置如何约束流向、距离和范围？
+    obligation: 先建立地图基底，再增加地点、路径、状态和结果。
+    candidate_programs: [DP12, DP07]
+    recipe_features: [GEOGRAPHY]
+    forced_moves: [W06, M05, C03]
+    reject: 没有地理含义的发光地图和随机弧线。
+  - id: SG14
+    name: 产品能力
+    detect: 产品本体、规格、结构、功能和使用结果共同构成卖点。
+    question: 哪个产品身份必须锁住，能力通过什么结果被证明？
+    obligation: 产品英雄位不丢失，机制或参数必须回到使用结果。
+    candidate_programs: [DP04, DP06, DP09, DP14, DP15, DP24]
+    recipe_features: [PRODUCT, SPEC]
+    forced_moves: [W04, C01, H04]
+    reject: 只绕产品旋转，或被图表和大字抢走主体。
+  - id: SG15
+    name: UI 操作
+    detect: 判断依赖软件、网页、应用或设备界面的输入、操作和结果。
+    question: 用户做了什么，界面哪个状态因此改变，结果在哪里可见？
+    obligation: 锁定真实或中性界面结构，只演示一条输入到结果路径。
+    candidate_programs: [DP15, DP14]
+    recipe_features: [UI, PRODUCT, PROCESS]
+    forced_moves: [R03, W08, M08]
+    reject: 全屏控件同时运动、伪造产品 UI 或结果没有输入原因。
+  - id: SG16
+    name: 问题到解决
+    detect: 文稿先描述痛点、限制或失败，再提出方案和收益。
+    question: 解决方案改变了哪个关键状态，而不是只换了情绪？
+    obligation: 同一对象保留问题态，方案动作只改变关键变量，结果可比较。
+    candidate_programs: [DP01, DP14, DP16, DP21]
+    recipe_features: [FAILURE, RECOVERY, TURNING_POINT]
+    forced_moves: [N08, C05, M03]
+    reject: 问题用黑红、解决用蓝绿但没有实际状态变化。
+  - id: SG17
+    name: 风险与冲突
+    detect: 判断涉及失败、损失、争议、阻力、威胁、瓶颈或临界点。
+    question: 风险从哪里积累，何时越过阈值，影响谁？
+    obligation: 中性状态先建立，风险色只跟随可解释的累积或传播。
+    candidate_programs: [DP17, DP05]
+    recipe_features: [FAILURE, CRISIS]
+    forced_moves: [K02, M05, Q01]
+    reject: 红色闪烁、火焰和故障特效替代风险机制。
+  - id: SG18
+    name: 成本与价值
+    detect: 判断依赖投入、成本、利润、损耗、节省、产出或价值交换。
+    question: 价值来自哪条路径，成本由哪些项构成，谁承受结果？
+    obligation: 总额拆为来源和去向，再回收为净结果与受影响对象。
+    candidate_programs: [DP13, DP18]
+    recipe_features: [COST, DATA]
+    forced_moves: [E08, E05, Q05]
+    reject: 混用币种、时间窗或只给金额冲击值。
+  - id: SG19
+    name: 前后转化
+    detect: 同一对象从旧状态变成新状态，或需要显示修复、升级、优化。
+    question: 哪些属性保持身份，哪个属性真正改变？
+    obligation: 锁定坐标和身份，用替换、对齐或拆解重组显示差量。
+    candidate_programs: [DP19, DP21]
+    recipe_features: [COMPARISON, RECOVERY]
+    forced_moves: [C05, M02, L02]
+    reject: 用两个完全不同对象伪装前后效果。
+  - id: SG20
+    name: 分类与枚举
+    detect: 文稿列出多项类型、功能、人物、步骤或特征，需要形成结构。
+    question: 分类依据是什么，哪些项同层，哪一项当前最重要？
+    obligation: 先给容器和分类规则，再逐项进入固定槽位并收束结论。
+    candidate_programs: [DP20, DP02]
+    recipe_features: [PROCESS, ANNUAL]
+    forced_moves: [C02, M03, T08]
+    reject: 逐句换一张卡片而没有总体结构。
+  - id: SG21
+    name: 角色目标
+    detect: 人物或 IP 有明确目标、动作、阻碍、环境反馈和情绪结果。
+    question: 角色想完成什么，环境为何响应，后果如何改变下一动作？
+    obligation: 目标先可见，角色单一动作启动，环境晚半拍反馈，反应收尾。
+    candidate_programs: [DP21, DP17]
+    recipe_features: [PERSON, FAILURE]
+    forced_moves: [C03, M05, L02]
+    reject: 角色无目标漂浮、表情先于事件或凭空新增道具。
+  - id: SG22
+    name: 品牌价值
+    detect: 内容要把品牌主张、能力或态度落到产品、行动或事实证明。
+    question: 哪个视觉母题能贯穿价值动作、证据和落版？
+    obligation: 母题先建立，必须经历价值动作和证明，再回收为品牌记忆。
+    candidate_programs: [DP22, DP23]
+    recipe_features: [PRODUCT, CONCLUSION]
+    forced_moves: [K01, H01, L01]
+    reject: 只有口号、氛围和 Logo，没有证明链。
+  - id: SG23
+    name: 活动标题与情绪钩子
+    detect: 首要任务是建立片名、活动、节目、章节或高能情绪记忆。
+    question: 哪个单一母题能承受变奏并最终变成标题落版？
+    obligation: 只用一套转场语法，变奏不超过三次，落版稳定可读。
+    candidate_programs: [DP23, DP24]
+    recipe_features: [HOOK, HIGH_ENERGY]
+    forced_moves: [T01, L05, X06]
+    reject: 每次变奏换一套特效，标题与主体同时抢焦点。
+  - id: SG24
+    name: 异质素材混合
+    detect: 同段需要混用实拍、档案、网页、聊天、横竖屏、3D 或 MG。
+    question: 哪个容器或共同动作让不同媒介仍像同一条论证？
+    obligation: 稳定外框、身份锚和交接动作，只让内容槽与媒介责任变化。
+    candidate_programs: [DP22, DP24]
+    recipe_features: [MULTI_SOURCE, CROSS_ASPECT]
+    forced_moves: [R07, H07, X08]
+    reject: 每换素材就重启世界、模糊填边或无锚硬切。
+
+programs:
+  - {id: DP01, name: 抽象判断具身化, spine: [N01, W07, C03, M08, L02, Q02], states: '抽象命题 -> 同构实体 -> 单变量受力/变化 -> 可判定终态', fit: [SG01, SG16], support: [DP05, DP21], avoid: '多物体比喻并发'}
+  - {id: DP02, name: 整体拆解回装, spine: [N05, C04, M07, M06, L02, Q03], states: '整体 -> 进入局部 -> 分层/部件作用 -> 回装验证', fit: [SG02, SG06, SG20], support: [DP06, DP20], avoid: '拆开后忘记整体坐标'}
+  - {id: DP03, name: 同尺度公平比较, spine: [N02, C05, T04, E05, M02, Q05], states: '共同基线 -> 方案 A/B -> 单变量差异 -> 结论', fit: [SG03, SG08], support: [DP08, DP21], avoid: '构图先替观众站队'}
+  - {id: DP04, name: 时间谱系演化, spine: [N03, W02, E06, E07, X07, L03], states: '时代坐标 -> 关键节点 -> 对象状态迭代 -> 当前状态', fit: [SG04, SG14], support: [DP08, DP09], avoid: '年份堆满画面'}
+  - {id: DP05, name: 原因机制结果链, spine: [N04, W07, E04, M05, L04, Q06], states: '原因 -> 传输/作用 -> 结果 -> 后果回收', fit: [SG05, SG17], support: [DP06, DP13], avoid: '节点同时亮起'}
+  - {id: DP06, name: 隐形机制剖面, spine: [N05, R05, W03, C04, M07, H04], states: '对象外观 -> 剖面 -> 路径/作用点 -> 回到结果', fit: [SG06, SG14], support: [DP02, DP24], avoid: '随机科技粒子'}
+  - {id: DP07, name: 输入转换输出路径, spine: [W07, E04, M05, M03, L04, Q01], states: '输入 -> 检查点 -> 转换/损耗 -> 输出', fit: [SG07, SG13], support: [DP05, DP13], avoid: '无方向流程图'}
+  - {id: DP08, name: 基线差值结论, spine: [N07, C05, T04, E05, M04, Q05], states: '单位/基线 -> 差值增长 -> 终值 -> 语义结论', fit: [SG08, SG03, SG04], support: [DP03, DP13], avoid: '孤立大数字'}
+  - {id: DP09, name: 产品英雄机制结果, spine: [W04, C01, M06, H04, K03, L02], states: '产品英雄位 -> 能力入口 -> 内部机制/参数 -> 使用结果 -> 身份回收', fit: [SG14, SG06], support: [DP06, DP15], avoid: '只绕产品旋转'}
+  - {id: DP10, name: 原始材料全貌局部回环, spine: [N06, R02, T05, E01, C08, Q04], states: '来源全貌 -> 框选 -> 放大读取 -> 回到出处/结论', fit: [SG09, SG10], support: [DP22], avoid: '仿制截图'}
+  - {id: DP11, name: 关系网络增量证明, spine: [R04, W01, E02, E03, M05, Q06], states: '主体节点 -> 分组 -> 单条关系 -> 关系状态累积 -> 当前结论', fit: [SG11, SG10], support: [DP10, DP13], avoid: '蜘蛛网连线'}
+  - {id: DP12, name: 中心生态分层, spine: [C06, M01, M05, K01, L04, Q03], states: '中心身份 -> 第一圈 -> 第二圈 -> 当前关系高亮 -> 全局回收', fit: [SG12, SG13], support: [DP11, DP20], avoid: '外围无限增长'}
+  - {id: DP13, name: 价值成本流向, spine: [W07, E08, E05, M05, T04, Q05], states: '总投入 -> 来源/去向 -> 损耗/增益 -> 净结果 -> 受影响对象', fit: [SG18, SG07, SG08, SG11], support: [DP05, DP08], avoid: '金额只有冲击没有机制'}
+  - {id: DP14, name: 能力动作结果证明, spine: [C01, M01, M08, H01, T02, L02], states: '能力命题 -> 用户/系统动作 -> 状态变化 -> 可见结果 -> 结论印章', fit: [SG14, SG15, SG16], support: [DP09, DP15], avoid: '只说能力不展示结果'}
+  - {id: DP15, name: UI 输入动作结果, spine: [R03, W08, C01, M08, T08, Q03], states: '界面入口 -> 输入/操作 -> 局部状态更新 -> 结果读数 -> 下一入口', fit: [SG15, SG14], support: [DP14, DP08], avoid: '所有控件同时运动'}
+  - {id: DP16, name: 问题方案差量, spine: [N08, C05, M03, K03, T02, L02], states: '同一对象问题态 -> 方案介入 -> 关键变量改变 -> 结果对照 -> 结论', fit: [SG16, SG01], support: [DP01, DP21], avoid: '只换色不换状态'}
+  - {id: DP17, name: 风险积累阈值后果, spine: [K02, E04, M04, M05, L04, Q01], states: '中性基线 -> 风险累积 -> 阈值 -> 扩散/损失 -> 后果', fit: [SG17, SG05, SG21], support: [DP05, DP13], avoid: '红闪替代机制'}
+  - {id: DP18, name: 价值交换双结果, spine: [E08, C05, T04, M03, L04, Q05], states: '投入 -> 获益 -> 隐性代价 -> 双结果并置 -> 判断', fit: [SG18, SG03], support: [DP03, DP13], avoid: '只显示收益'}
+  - {id: DP19, name: 状态机反馈循环, spine: [N04, E04, M05, M08, L04, Q06], states: '初态 -> 触发 -> 状态转移 -> 反馈 -> 稳态/循环条件', fit: [SG05, SG19], support: [DP06, DP07], avoid: '循环没有退出条件'}
+  - {id: DP20, name: 分类槽位收束, spine: [C02, M03, T08, K01, L02, Q03], states: '分类规则 -> 空槽 -> 分批归位 -> 当前项高亮 -> 总体结论', fit: [SG20, SG02, SG12], support: [DP02, DP12], avoid: '卡片轮播无总结构'}
+  - {id: DP21, name: 同坐标前后转化, spine: [C05, M02, M03, X06, L02, Q04], states: '旧态 -> 变化动作 -> 新态 -> 叠影/滑块验证 -> 结果', fit: [SG19, SG03, SG16, SG21], support: [DP03, DP16], avoid: '不同对象伪装前后'}
+  - {id: DP22, name: 证据与图解接力, spine: [R07, C08, H05, X04, L02, Q04], states: '原始材料 -> 来源锚 -> MG 展开解释 -> 证据回收 -> 判断', fit: [SG09, SG10, SG22, SG24], support: [DP10, DP11], avoid: '图解离开证据后不返回'}
+  - {id: DP23, name: 母题变奏标题落版, spine: [T01, K01, L05, X06, T02, L07], states: '单一钩子 -> 母题 -> 两到三次同语法变奏 -> 标题 -> 稳定落版', fit: [SG22, SG23], support: [DP14, DP24], avoid: '变奏各用一套特效'}
+  - {id: DP24, name: 英雄对象媒介变换, spine: [W04, C01, K08, M07, X08, L01], states: '英雄对象 -> 材质/结构变化 -> 媒介接力 -> 功能结果 -> 英雄角度回收', fit: [SG14, SG23, SG24, SG06], support: [DP06, DP09, DP23], avoid: '对象与相机同时大幅旋转'}
+
+fusion_rules:
+  - {id: FR01, when: [SG08, SG03], primary: DP03, support: DP08, rule: 比较骨架优先，数字只负责同尺度差值和结论，不能另开图表世界。}
+  - {id: FR02, when: [SG06, SG14], primary: DP09, support: DP06, rule: 产品身份持续可见，剖面机制只占中段，结尾必须回到使用结果。}
+  - {id: FR03, when: [SG05, SG06], primary: DP05, support: DP06, rule: 因果链决定顺序，剖面只解释中间机制节点。}
+  - {id: FR04, when: [SG09, SG08], primary: DP10, support: DP08, rule: 先证明数字来自哪里，再进入标准化基线差值，结尾回到出处或结论。}
+  - {id: FR05, when: [SG04, SG03], primary: DP04, support: DP03, rule: 时间节点决定章节，只在同一节点内做同坐标比较。}
+  - {id: FR06, when: [SG07, SG18], primary: DP13, support: DP07, rule: 价值流向是骨架，流程节点承担成本发生位置，不并排画两张图。}
+  - {id: FR07, when: [SG11, SG09], primary: DP11, support: DP10, rule: 原始材料先建立单条关系证据，关系网只做已证实节点的增量扩展。}
+  - {id: FR08, when: [SG13, SG07], primary: DP07, support: DP12, rule: 地图只作为路径约束，主动作仍是载体从起点到终点的状态变化。}
+  - {id: FR09, when: [SG01, SG10], primary: DP22, support: DP01, rule: 真实材料承担存在性，具身化只解释抽象判断，不冒充证据。}
+  - {id: FR10, when: [SG15, SG08], primary: DP15, support: DP08, rule: 数字必须作为操作结果出现在固定结果槽，不能切走到独立大字页。}
+  - {id: FR11, when: [SG16, SG19], primary: DP16, support: DP21, rule: 问题与解决共享同一对象，前后对照只验证关键变量的差量。}
+  - {id: FR12, when: [SG17, SG05], primary: DP17, support: DP05, rule: 风险色在因果成立后出现，传播路径继承原因节点而非随机扩散。}
+  - {id: FR13, when: [SG22, SG10], primary: DP22, support: DP23, rule: 事实证明先于品牌落版，母题只负责连续性和记忆，不替代证据。}
+  - {id: FR14, when: [SG24, SG09], primary: DP22, support: DP10, rule: 稳定容器吸收媒介差异，关键证据可临时全屏，读完回到同一槽位。}
+  - {id: FR15, when: [SG23, SG14], primary: DP24, support: DP23, rule: 英雄对象是母题来源，标题变奏沿对象形状和动作发展，不额外发明装饰母题。}
+  - {id: FR16, when: [SG20, SG12], primary: DP12, support: DP20, rule: 生态层级先决定圈层，分类项只在所属圈层固定槽位分批归位。}
+  - {id: FR17, when: [SG21, SG17], primary: DP21, support: DP17, rule: 角色目标和动作是主线，风险只作为环境反馈和后果，不夺走角色主体。}
+  - {id: FR18, when: [SG04, SG14], primary: DP04, support: DP09, rule: 产品谱系保持共同视角，只有当前关键代际允许进入英雄机制演示。}

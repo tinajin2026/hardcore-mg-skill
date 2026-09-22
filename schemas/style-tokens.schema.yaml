@@ -1,0 +1,75 @@
+schema_version: "1.0"
+required:
+  - visual_thesis
+  - canvas
+  - world
+  - typography
+  - semantic_colors
+  - transition_policy
+fields:
+  visual_thesis:
+    type: string
+    rule: 说明题材原生世界以及它如何解释核心关系
+  canvas:
+    aspect_ratio: string
+    resolution: string_or_null
+    fps: number_or_null
+    safe_area: string
+    vertical_zones: object_or_null
+  world:
+    persistent_frame: string_or_null
+    background_material: string
+    grid_or_page_system: string_or_null
+    slots: list
+    full_screen_exception: string
+  typography:
+    chapter:
+      family_role: string
+      size_role: string
+      placement: string
+    stamp:
+      max_characters: 4
+      placement: string
+    evidence:
+      placement: string
+      source_required: boolean
+    data:
+      unit_required: boolean
+      baseline_required_for_comparison: boolean
+    ui:
+      preserve_real_ui: boolean
+    subtitle_mode: disabled
+    bottom_caption: forbidden
+    voiceover_transcript: forbidden
+  semantic_colors:
+    neutral: string
+    evidence: string
+    risk: string
+    active: string
+    future: string_or_null
+    actors: object
+  textures:
+    archive: list
+    live_action: list
+    mg: list
+  components:
+    allowed: list
+    forbidden_generic: list
+  objects:
+    type: object
+    per_object_fields: [position, scale, orientation, lighting, current_layer]
+  motion:
+    default_density: [low, medium, high]
+    primary_primitives: list
+    max_primary_actions_per_beat: 1
+  transition_policy:
+    intra_world: string
+    chapter_reset: string
+    live_mg_handoff: string
+  entity_mode:
+    enum: [neutralize, hybrid, preserve]
+  evidence_states:
+    relationship_lines: [confirmed, inferred, unknown]
+  sound_policy:
+    verified_only: boolean
+    default_when_unreviewed: unverified

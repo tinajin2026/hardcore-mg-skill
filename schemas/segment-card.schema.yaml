@@ -1,0 +1,78 @@
+schema_version: "1.0"
+required:
+  - segment_id
+  - source_span
+  - core_claim
+  - narrative_function
+  - media_mode
+  - initial_state
+  - primary_action
+  - readable_hold
+  - end_state
+fields:
+  segment_id:
+    type: string
+    example: S01
+  timecode:
+    type: string_or_null
+    example: "00:00-00:15"
+  duration_seconds:
+    type: number_or_auto
+  source_span:
+    type: string
+    rule: 必须能回指原稿，不添加新事实
+  spoken_text:
+    type: string_or_null
+    rule: 只用于时长和同步，不直接写入画面
+  core_claim:
+    type: string
+    rule: 每段唯一判断
+  narrative_function:
+    enum: [HOOK, ORIGIN, CONTEXT, EVIDENCE, COMPARISON, PROCESS, CAUSE, CONFLICT, CRISIS, RECOVERY, CONCLUSION]
+  semantic_tags:
+    type: list
+    max_items: 4
+  evidence_need:
+    type: list
+  media_mode:
+    enum: [live_action, archive, real_ui, mg, hybrid]
+  media_responsibility:
+    live_or_source: string
+    mg: string
+  visual_thesis_link:
+    type: string
+  primary_focus:
+    type: string
+  secondary_focus:
+    type: string_or_null
+  initial_state:
+    inherited_objects: list
+    inherited_layout: string
+    inherited_time: string_or_null
+  primary_action:
+    verb: string
+    subject: string
+    purpose: string
+  readable_hold:
+    state: string
+    minimum_seconds: number_or_auto
+  on_screen_text:
+    chapter_title: list
+    semantic_stamp: list
+    evidence_labels: list
+    data: list
+    ui_or_document: list
+    bottom_caption: forbidden
+    voiceover_transcript: forbidden
+  sound_sync:
+    type: verified_cue_list_or_unverified
+  risk_controls:
+    type: list
+    max_items: 6
+  end_state:
+    visible_objects: list
+    layout: string
+    time: string_or_null
+    unresolved_motion: string
+  next_segment_interface:
+    type: string

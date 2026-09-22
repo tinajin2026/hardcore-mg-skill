@@ -1,0 +1,4 @@
+interface:
+  display_name: "MiniMax H3 MG 编导"
+  short_description: "让新稿自动触发多维 MG 方法栈并编译为可验证 H3 方案"
+  default_prompt: "Use $documentary-mg-generator to detect semantic signals in this new content, compile an h3-mg-plan.v7 stack with deterministic programs and recipes, action-level program/recipe/fusion bindings, MM01-MM12 micro-motion bindings, AF01-AF12 attention/read paths, route adaptations, complete stage ownership, granular shots, native H3 prompts, and deterministic validation. Do not cite or imitate source videos or timecodes."
